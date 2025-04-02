@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkinson's Disease Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        form { margin-top: 20px; }
+        input { margin: 5px; padding: 8px; }
+        button { padding: 10px; background: blue; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>Parkinson's Disease Prediction</h1>
+    <form action="/predict" method="post">
+        <input type="text" name="tqwt_kurtosisValue_dec_28" placeholder="Kurtosis Value (Dec 28)" required>
+        <input type="text" name="tqwt_kurtosisValue_dec_26" placeholder="Kurtosis Value (Dec 26)" required>
+        <input type="text" name="tqwt_kurtosisValue_dec_25" placeholder="Kurtosis Value (Dec 25)" required>
+        <input type="text" name="tqwt_kurtosisValue_dec_15" placeholder="Kurtosis Value (Dec 15)" required>
+        <input type="text" name="tqwt_kurtosisValue_dec_11" placeholder="Kurtosis Value (Dec 11)" required>
+        <input type="text" name="tqwt_energy_dec_27" placeholder="Energy (Dec 27)" required>
+        <input type="text" name="tqwt_energy_dec_14" placeholder="Energy (Dec 14)" required>
+        <input type="text" name="tqwt_energy_dec_12" placeholder="Energy (Dec 12)" required>
+        <input type="text" name="tqwt_energy_dec_11" placeholder="Energy (Dec 11)" required>
+        <input type="text" name="gender" placeholder="Gender (0: Female, 1: Male)" required>
+        <button type="submit">Predict</button>
+    </form>    
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
